@@ -1,11 +1,15 @@
 display:inline-bolck; 中间间隙
+http://www.jb51.net/css/68785.html
 
 border-radius; 详解
+https://blog.csdn.net/xiaoermingn/article/details/53497607
 
 :after 伪类清空浮动
+http://www.zhangxinxu.com/wordpress/2010/09/after伪类content内容生成常见应用举例/
 
 :first :first-child 对比
 
 box-shadow; 详解
+http://www.mrszhao.com/post/56.html
 
 JS立即执行函数
