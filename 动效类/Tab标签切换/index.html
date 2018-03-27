@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tab</title>
+    <style>
+    .tabs{
+        margin: 0;
+        padding: 0;
+        list-style:none;
+        font-size: 0;
+    }
+    .tabs li{
+        color:#fff;
+        font-size: 16px;
+        font-weight: bold;
+        float: left;
+        background-color:#6EDEEF;
+        line-height: 30px;
+        margin-top: 30px;
+        padding-top: 10px;
+        width: 130px;
+        text-align:center;
+        box-shadow: 2px 8px 25px -2px #545F60;
+        position: relative;
+        z-index: 2;
+    }
+    .clear:after{
+        content: "";
+        display:block;
+        clear:both;
+    }
+    .tabs li:hover{
+        margin-top: 25px;
+        padding: 10px 0 5px 0;
+    }
+    .tabs li:first-child{
+        border-top-left-radius:10px;
+    }
+    .tabs li:last-child{
+        border-top-right-radius:10px;
+        z-index: 1;
+        box-shadow:none;
+    }
+
+    .tabs li.active{
+        background-color:#545F60;
+        margin-top: 20px;
+        padding: 10px 0 10px 0;
+        z-index: 10;
+        
+    }
+
+    .content{
+        width:390px;
+        height: 300px;
+        font-size: 16px;
+        font-weight: 500;
+        color:#fff;
+        background-color:#545F60;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        box-shadow:2px 1px 20px -2px #545F60;
+    }
+    .content div{
+        padding:30px 40px 40px;
+        display:none;
+    }
+    .content div:first-child{
+        display:block;
+    }
+    </style>
+</head>
+<body>
+    <div>
+        <ul class=" tabs clear">
+            <li class="active" data-cid="#one">Some</li>
+            <li data-cid="#two">Sexy</li>
+            <li data-cid="#three">Tabs</li>
+        </ul>
+        <div class="content">
+            <div id="one">Some text about Light sit amet, consectetur adipisicing elit. Pariatur modi quod quo iure recusandae eligendi q.t, consectetur adipisicing elit. Pariatur </div>
+            <div id="two">Sexy sexy  consectetur adipisicing elit. Pariatur modi quod quo iure recusandae eligendi q.t, consectetur adipisicing elit. Pariatur modi quod quo iureq</div>
+            <div id="three">Tabs , consectetur adipisicing elit. Pariatur modi quod quo iure recusandae eligendi q.t, consectetur adipisicing elit. Pariatur modi quod quo iureq</div>
+        </div>
+    </div>
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script>
+        (function($){
+            var tabs=$('.tabs li');
+            var contents=$('.content div')
+            tabs.on('click',function(){
+                var cid,$this=$(this);
+                cid=$this.attr('data-cid');
+                tabs.removeClass('active');
+                $(this).addClass('active');
+                contents.hide();
+                $(cid).fadeIn(200); 
+            });
+        })(jQuery);
+    </script>
+</body>
+</html>
