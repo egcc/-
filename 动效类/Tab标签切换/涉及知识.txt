@@ -1,4 +1,4 @@
-display:inline-bolck; 中间白色间隙
+display:inline-bolck; 中间间隙
 
 border-radius; 详解
 
